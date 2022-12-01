@@ -4,13 +4,13 @@ const record = [
   { year: "2013", result: "L"},
   //...
   ]
-  
-  function superbowlWin(obj){
-  let year;
-  obj.find(function(obj){
-  if(obj.result === "W"){
-  year = obj.year;
-  } 
-  });
-  return year;
+
+  function superbowlWin(arr){
+    for(let item of arr){
+      if(item.result === "W"){
+        return item.year;
+      }
+    }
   }
+
+  record.find(superbowlWin);
